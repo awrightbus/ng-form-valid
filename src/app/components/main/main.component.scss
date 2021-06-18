@@ -1,0 +1,89 @@
+.securityGuardColumn {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.securityGuard {
+    max-height: 300px;
+}
+
+h2 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.vipList {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    transition: box-shadow 0.3s;
+}
+
+.vipList:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.vipName {
+    text-align: center;
+}
+
+.idCard {
+    border-radius: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 30px 15px;
+    transition: box-shadow 0.3s;
+}
+
+.idCard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.idCardLeftColumn {
+    padding: 5px 15px 0;
+    text-align: center;
+}
+
+.idCardRightColumn {
+    padding: 0;
+}
+
+.idCardProfilePicture {
+    max-width: 100%;
+    max-height: 100px;
+}
+
+.welcomeMessage {
+    margin: 0;
+}
+
+.formErrorUl {
+    margin: 0;
+}
+
+#fullName {
+    width: 90%;
+}
+
+#ageLabel {
+    margin-top: 10px;
+}
+
+#age {
+    width: 90%;
+}
+
+.imageContainer {
+    text-align: center;
+    padding: 45px 0;
+}
+
+.vipEntranceRopes {
+    width: 50%;
+}
+
+@media only screen and (max-width: 575px) {
+    .vipEntranceRopes {
+        margin-top: 30px;
+    }
+}

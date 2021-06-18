@@ -1,0 +1,55 @@
+<!-- Form -->
+<div class="row justify-content-center">
+    <div class="col-12 securityGuardColumn">
+        <img src="../../../assets/images/security-guard.png" alt="security guard" class="securityGuard" />
+    </div>
+    <div class="col-12 col-md-5">
+        <h2>VIP List:</h2>
+        <ul class="list-group list-group-flush vipList">
+            <li *ngFor="let vipMember of vipFullNames" class="list-group-item vipName">{{ vipMember }}</li>
+        </ul>
+    </div>
+    <div class="col-12 col-md-5">
+        <h2>ID Check:</h2>
+        <div class="idCard">
+            <div class="row">
+                <div class="col-12">
+                    <div *ngIf="validationPassed" class="alert alert-success" role="alert">
+                        <p class="welcomeMessage">Welcome! You're on the VIP list.</p>
+                    </div>
+                    <div *ngIf="errors.length > 0" class="alert alert-danger" role="alert">
+                        <ul class="formErrorUl">
+                            <li *ngFor="let error of errors">
+                                {{ error }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4 idCardLeftColumn">
+                    <img src="../../../assets/images/id-card-profile.png" alt="ID card profile"
+                        class="idCardProfilePicture" />
+                </div>
+                <div class="col-8 idCardRightColumn">
+                    <form>
+                        <div class="form-group">
+                            <label for="fullName">Full name</label>
+                            <input (change)="fullNameChangeHandler($event)" type="text" class="form-control"
+                                id="fullName" aria-describedby="fullName" placeholder="Full name">
+                        </div>
+                        <div class="form-group">
+                            <label id="ageLabel" for="age">Age</label>
+                            <input type="number" class="form-control" id="age" placeholder="21+">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="imageContainer">
+            <button (click)="validateForm()" type="button" class="btn btn-dark submitButton">Enter</button>
+            <br />
+            <img src="../../../assets/images/vip-entrance.png" alt="VIP entrance ropes" class="vipEntranceRopes" />
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<!-- ABOUT THIS PROJECT MODAL: -->
+<ng-template #aboutModal let-modal>
+    <div class="aboutModalHeader">
+        <h4>About this project</h4>
+        <hr>
+    </div>
+    <div class="aboutModalBody">
+        <p>
+            {{ isReactiveForm ? getReactiveAboutText() : getDefaultAboutText() }}
+        </p>
+    </div>
+    <div class="aboutModalFooter">
+        <!-- TODO: "Extra Credit Bonus Challenge (Do last)" - Uncomment the below code to enable a link that will
+        route the user to a new page. The challenge: recreate the same form from the default landing page
+        (as in, reuse the images and styling) except this time, try building the form using Angular "Reactive
+        Forms" and the "model-driven" approach documented here: https://angular.io/guide/reactive-forms
+        By now, you should understand the basic concepts of form change handlers and form validation.
+        This will help you grasp how the same concepts apply when you use reactive forms. -->
+        <!-- <div *ngIf="!isReactiveForm">
+            <button routerLink="/reactive-form" (click)="goToReactiveForm()" type="button" class="btnLinkCustom viewReactiveFormLink">
+                View this same project built using Angular Reactive Forms!
+            </button>
+        </div> -->
+        <button type="button" class="btn btn-dark" (click)="modal.close('Save click')">Close</button>
+    </div>
+</ng-template>
+
+<div class="row">
+    <div class="col-12 headerContainer">
+        <div class="headerContent">
+            <h1>{{ isReactiveForm ? "Angular Reactive Form Practice" : "Form Validation Practice" }}</h1>
+            <div *ngIf="isReactiveForm">
+                <button routerLink="/main" (click)="goBack()" type="button" class="btn btn-dark goBackButton">Go
+                    back</button>
+            </div>
+            <button (click)="triggerModal(aboutModal)" type="button" class="btnLinkCustom">About this project</button>
+        </div>
+    </div>
+</div>
